@@ -15,6 +15,14 @@
             inp.remove();
         }
     </script>
+	<script>
+		//login form code
+$(document).ready(function(){
+    $("#loginopen").click(function(){
+      $(".login-content").toggle();
+  });
+  });
+	</script>
     <style type="text/css">
     	
 html > body {
@@ -69,10 +77,40 @@ header {
     border-left: 1px dashed #333;
 
 }
+	    
+.login-block{
+  background-color: rgba(102, 102, 102, .5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.login-content{
+  background-color: orange;
+  position: fixed;
+  width: 500px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  display: none;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+background-image: url(../images/login-form-background.png);
+	background-repeat: no-repeat;
+}
     </style>
 </head>
 <body>
-	<main>
+<div class="login-block"></div>
+<div class="login-content">
+<main>
     <div class="container min-height">
 
                     <div>
@@ -94,6 +132,13 @@ Cyper Key
             </div>
                 </div>
 </main>
+</table>
+</div>
+
+	
+	<input type="button" name="loginopen" id="loginopen" value="Check Status">
+	
+	
 <footer>
     <p>Property of Bhadoo Industries</p>
 </footer>
